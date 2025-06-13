@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio terminal</title>
+  <!-- <script src="script.js" type="text/javascript" defer></script> -->
+  <script src="scripty.js" type="text/javascript" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main>
+      <div class="header"> bash - Antonio Oyuela Portfolio</div>
+      <div class="terminal" id="terminalWindow" >
+        <section id="terminal">
+          <div class="command">Successful login - <span class="error" id="date"></span></div>
+          <div class="title">Mi Portfolio v1.0</div>
+          Hola! Bienvenidos a mi portfolio, para ver la lista de commandos ingresá <span class="command">help</span>
+          <br><small>  Usa las flechas ↑↓ para navegar por el historial de comandos</small>
+        </section>
+        <div class="prompt">
+          <span class="command">$</span> <span class="title">invitado</span> <input id="promtInput"/>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Template para clonación de prompts -->
+    <div class="hidden" id="promptClone">
+      <span class="command">$</span> <span class="title">invitado</span> <span class="promtCloneInput"></span>
+      <div class="promtCloneContent"></div>
+    </div>
+    
+    <!-- Templates de comandos -->
+    <div class="hidden" id="help">
+      <div class="sectionTitle">Comandos disponibles: </div>
+      <div class="indent">
+        <div>
+          <span class="command">about</span>:
+          <div class="indent">Sobre mi</div> 
+        </div>
+        <div>
+          <span class="command">social</span>:
+          <div class="indent">Listado de mis redes sociales</div> 
+        </div>
+        <div>
+          <span class="command">skills</span>:
+          <div class="indent">Las herramientas con las que trabajo</div> 
+        </div>
+        <div>
+          <span class="command">education</span>:
+          <div class="indent">Todo sobre mi formación</div> 
+        </div>
+        <div>
+          <span class="command">experience</span>:
+          <div class="indent">Donde trabajé hasta ahora</div> 
+        </div>
+        <div>
+          <span class="command">projects</span>:
+          <div class="indent">Un listado de mis proyectos</div> 
+        </div>
+        <div>
+          <span class="command">whoami</span>:
+          <div class="indent">Información del usuario actual</div> 
+        </div>
+        <div>
+          <span class="command">history</span>:
+          <div class="indent">Historial de comandos ejecutados</div> 
+        </div>
+        <div>
+          <span class="command">clear</span>:
+          <div class="indent">Borrar el historial de la terminal</div> 
+        </div>
+      </div>
+      <div style="margin-top: 15px; color: var(--title);">
+            Usa las flechas ↑↓ para navegar por el historial
+      </div>
+    </div>
+
+    <div class="hidden" id="projects">
+      <div class="sectionTitle">Proyectos: </div>
+      <div class="indent">
+        <span class="title">Proyecto 1 | La pesadilla de Mort and Rick</span> - <a href="https://github.com/Antonio-92-cpu/Rickandmorty" target="_blank"><span class="command">Link a github</span> </a>
+      </div>
+      <div class="indent">
+        <span class="title">Proyecto 2 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+      </div>
+      <div class="indent">
+        <span class="title">Proyecto 3 </span> - <a href="https://github.com/user/proyecto" target="_blank"><span class="command">Link a github</span> </a>
+      </div>
+    </div>
+
+    <div class="hidden" id="skills">
+      <div class="sectionTitle">Skills: </div>
+      <div class="indent">
+        <div>
+          <span class="command">Programacion</span>:
+          <div class="indent">
+            <span class="title">HTML</span>
+            <span class="title">CSS</span>
+            <span class="title">JavaScript</span>
+            <span class="title">Astro</span>
+            <span class="title">Angular</span>
+            <span class="title">React</span>
+            <span class="title">GIT</span>
+          </div> 
+        </div>
+        <div>
+          <span class="command">Diseño | Creación de Contenido</span>:
+          <div class="indent">
+            <span class="title">Illustrator</span>
+            <span class="title">Photoshop</span>
+            <span class="title">InDesing</span>
+            <span class="title">Premiere Pro</span>
+            <span class="title">Illustrator</span>
+            <span class="title">Photoshop</span>
+            <span class="title">InDesing</span>
+            <span class="title">Photoshop</span>
+          </div> 
+        </div>
+        <div>
+          <span class="command">Idiomas</span>:
+          <div class="indent">
+            <span class="title">Español (Nativo)</span>
+            <span class="title">Ingles (Básico)</span>
+            <span class="title">Portugués (Básico)</span>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden" id="about">
+      <div class="sectionTitle">Sobre mi: </div>
+        <div class="indent">
+          Hola! mi nombre es <span class="command">Antonio Oyuela</span>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+        </div> 
+    </div>
+
+    <div class="hidden" id="experience">
+      <div class="sectionTitle">Experiencia: </div>
+      <div class="indent">
+        <span class="title">FullStack DEV - Empresa Full</span> - <span class="command">Julio 2020 - Hoy</span>
+        <div class="indent">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+        </div> 
+      </div>
+      <div class="indent">
+        <span class="title">Frontend DEV - Empresa Front</span> - <span class="command">Enero 2018 - Julio 2020</span>
+        <div class="indent">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+        </div> 
+      </div>
+    </div>
+
+    <div class="hidden" id="social">
+      <div class="sectionTitle">Redes sociales: </div>
+      <div class="indent">
+        <span class="title">Github</span> - <span class="command">https://github.com/user</span>
+      </div>
+      <div class="indent">
+        <span class="title">LinkedIn</span> - <span class="command">https://linkedin.com/user</span>
+      </div>
+      <div class="indent">
+        <span class="title">YouTube</span> - <span class="command">https://youtube.com/user</span>
+      </div>
+    </div>
+
+    <div class="education hidden" id="education">
+      <div class="sectionTitle">Formación: </div>
+      <div class="indent">
+        <span class="title">Técnico en Sistemas Microinformáticos y Redes - IES Gaspar Melchor de Jovellanos</span> <span class="command">Finalizado 2021</span>
+        <div class="indent">
+          Soy <b>Técnico en Sistemas Microinformáticos y Redes (SMR)</b> instalación, configuración y mantengo equipos informáticos, redes locales, sistemas operativos y software básico. Resuelvo averías, doy soporte técnico a usuarios y aseguro el correcto funcionamiento de los sistemas informáticos en empresas y hogares.
+        </div>
+          <span class="title">Técnico en Sistemas Microinformáticos y Redes - IES Gaspar Melchor de Jovellanos</span> <span class="command">Finalizado 2021</span>
+        <div class="indent">
+          Soy <b>Preimpresor Digital</b> preparación de archivos digitales para su correcta impresión. Se encarga de revisar, corregir y ajustar textos, imágenes y colores, asegurando que los documentos cumplan con los requisitos técnicos del proceso de impresión. Manejar software de diseño y herramientas específicas para garantizar calidad y precisión en el resultado final.
+        </div> 
+      </div>
+      <div class="indent">
+        <span class="title">Curso Fullstack- Online</span> <span class="command">Finalizado 2018</span>
+        <div class="indent">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit harum beatae autem, sit dolorem vitae doloremque explicabo cupiditate, architecto iusto odio culpa facilis voluptatem saepe quis fugiat minus enim qui!
+        </div> 
+      </div>
+    </div>
+</body>
+</html>
